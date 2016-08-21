@@ -3,6 +3,7 @@ var ReactDOM = require('react-dom');
 var expect = require('expect');
 var $ = require('jQuery');
 var TestUtils = require('react-addons-test-utils');
+
 var Clock = require('Clock');
 
 describe('Clock', ()=> {
@@ -10,7 +11,7 @@ describe('Clock', ()=> {
     expect(Clock).toExist();
   });
 
-  describe('render', ()=>{
+  describe('Render', ()=>{
     it('should render clock to output', ()=>{
       var clock = TestUtils.renderIntoDocument(<Clock totalSeconds={62}/>);
       var $el = $(ReactDOM.findDOMNode(clock));
